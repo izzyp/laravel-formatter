@@ -1,6 +1,6 @@
-<?php namespace SoapBox\Formatter\Test;
+<?php namespace IzzyP\Formatter\Test;
 
-use SoapBox\Formatter\Formatter;
+use IzzyP\Formatter\Formatter;
 
 class ParserTest extends TestCase {
 

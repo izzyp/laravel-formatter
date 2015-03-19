@@ -1,8 +1,8 @@
-<?php namespace SoapBox\Formatter\Parsers;
+<?php namespace IzzyP\Formatter\Parsers;
 
 use Spyc;
 use Illuminate\Support\Str;
-use SoapBox\Formatter\ArrayHelpers;
+use IzzyP\Formatter\ArrayHelpers;
 
 /**
  * Parser Interface
@@ -124,7 +124,7 @@ abstract class Parser {
 
 	/**
 	 * Ported from laravel-formatter
-	 * https://github.com/SoapBox/laravel-formatter
+	 * https://github.com/IzzyP/laravel-formatter
 	 *
 	 * @author  Daniel Berry <daniel@danielberry.me>
 	 * @license MIT License (see LICENSE.readme included in the bundle)

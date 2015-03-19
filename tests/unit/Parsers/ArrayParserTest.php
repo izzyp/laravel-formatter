@@ -1,9 +1,9 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace IzzyP\Formatter\Test\Parsers;
 
 use stdClass;
-use SoapBox\Formatter\Test\TestCase;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Parsers\ArrayParser;
+use IzzyP\Formatter\Test\TestCase;
+use IzzyP\Formatter\Parsers\Parser;
+use IzzyP\Formatter\Parsers\ArrayParser;
 
 class ArrayParserTest extends TestCase {
 

@@ -1,8 +1,8 @@
-<?php namespace SoapBox\Formatter\Parsers;
+<?php namespace IzzyP\Formatter\Parsers;
 
 use InvalidArgumentException;
 use League\Csv\Reader;
-use SoapBox\Formatter\ArrayHelpers;
+use IzzyP\Formatter\ArrayHelpers;
 
 class CsvParser extends Parser {
 

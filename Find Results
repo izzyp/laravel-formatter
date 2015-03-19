@@ -1,0 +1,198 @@
+Searching 25 files for "SoapBox" (regex)
+
+/Users/yisroelperkel/Repos/laravel-formatter/composer.json:
+    1  {
+    2: 	"name": "soapbox/laravel-formatter",
+    3  	"type": "library",
+    4  	"description": "A formatting library that converts data output between XML, CSV, JSON, TXT, YAML and a few others.",
+    5  	"keywords": ["laravel", "formatter", "data", "convert", "csv", "xml", "yaml"],
+    6:     "homepage": "http://github.com/SoapBox/laravel-formatter",
+    7      "license": "MIT",
+    8  	"version": "2.0",
+    .
+   10  		{
+   11  			"name": "Graham McCarthy",
+   12: 			"email": "graham@soapboxhq.com",
+   13  			"homepage": "http://grahammccarthy.com"
+   14  		},
+   ..
+   27  	"autoload": {
+   28  		"psr-0": {
+   29: 			"SoapBox\\Formatter": "src/"
+   30  		}
+   31  	},
+
+/Users/yisroelperkel/Repos/laravel-formatter/readme.md:
+    2  ================
+    3  
+    4: [![Build Status](https://travis-ci.org/SoapBox/laravel-formatter.svg?branch=master)](https://travis-ci.org/SoapBox/laravel-formatter)
+    5  
+    6  A formatter package that will help you to easily convert between various formats such as XML, JSON, CSV, etc...
+    .
+   15  
+   16  ```bash
+   17: composer require soapbox/laravel-formatter
+   18  ```
+   19  
+   ..
+   23  {
+   24    "require": {
+   25:     "soapbox/laravel-formatter": "2.x"
+   26    }
+   27  }
+   ..
+   50  
+   51  ```php
+   52: use SoapBox\Formatter\Formatter;
+   53  ```
+   54  
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/ArrayHelpers.php:
+    1: <?php namespace SoapBox\Formatter;
+    2  
+    3  use Illuminate\Support\Arr;
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Formatter.php:
+    2  
+    3  use InvalidArgumentException;
+    4: use SoapBox\Formatter\Parsers\ArrayParser;
+    5: use SoapBox\Formatter\Parsers\CsvParser;
+    6: use SoapBox\Formatter\Parsers\JsonParser;
+    7: use SoapBox\Formatter\Parsers\XmlParser;
+    8: use SoapBox\Formatter\Parsers\YamlParser;
+    9  
+   10  class Formatter {
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/FormatterServiceProvider.php:
+    1: <?php namespace SoapBox\Formatter;
+    2  
+    3  use Illuminate\Support\ServiceProvider;
+    .
+   19     */
+   20    public function boot() {
+   21:     $this->package('soapbox/laravel-formatter');
+   22    }
+   23    /**
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Facades/Formatter.php:
+    1: <?php namespace SoapBox\Formatter\Facades;
+    2  
+    3  use Illuminate\Support\Facades\Facade;
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Parsers/ArrayParser.php:
+    1: <?php namespace SoapBox\Formatter\Parsers;
+    2  
+    3  use InvalidArgumentException;
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Parsers/CsvParser.php:
+    1: <?php namespace SoapBox\Formatter\Parsers;
+    2  
+    3  use InvalidArgumentException;
+    4  use League\Csv\Reader;
+    5: use SoapBox\Formatter\ArrayHelpers;
+    6  
+    7  class CsvParser extends Parser {
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Parsers/JsonParser.php:
+    1: <?php namespace SoapBox\Formatter\Parsers;
+    2  
+    3  class JsonParser extends Parser {
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Parsers/Parser.php:
+    1: <?php namespace SoapBox\Formatter\Parsers;
+    2  
+    3  use Spyc;
+    4  use Illuminate\Support\Str;
+    5: use SoapBox\Formatter\ArrayHelpers;
+    6  
+    7  /**
+    .
+  125  	/**
+  126  	 * Ported from laravel-formatter
+  127: 	 * https://github.com/SoapBox/laravel-formatter
+  128  	 *
+  129  	 * @author  Daniel Berry <daniel@danielberry.me>
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Parsers/XmlParser.php:
+    1: <?php namespace SoapBox\Formatter\Parsers;
+    2  
+    3  class XmlParser extends Parser {
+    .
+    7  	/**
+    8  	 * Ported from laravel-formatter
+    9: 	 * https://github.com/SoapBox/laravel-formatter
+   10  	 *
+   11  	 * @author  Daniel Berry <daniel@danielberry.me>
+
+/Users/yisroelperkel/Repos/laravel-formatter/src/IzzyP/Formatter/Parsers/YamlParser.php:
+    1: <?php namespace SoapBox\Formatter\Parsers;
+    2  
+    3  use InvalidArgumentException;
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/TestCase.php:
+    1: <?php namespace SoapBox\Formatter\Test;
+    2  
+    3  abstract class TestCase extends \PHPUnit_Framework_TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/FormatterTest.php:
+    1: <?php namespace SoapBox\Formatter\Test;
+    2  
+    3: use SoapBox\Formatter\Formatter;
+    4  
+    5  class FormatterTest extends TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/ParserTest.php:
+    1: <?php namespace SoapBox\Formatter\Test;
+    2  
+    3: use SoapBox\Formatter\Formatter;
+    4  
+    5  class ParserTest extends TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/Parsers/ArrayParserTest.php:
+    1: <?php namespace SoapBox\Formatter\Test\Parsers;
+    2  
+    3  use stdClass;
+    4: use SoapBox\Formatter\Test\TestCase;
+    5: use SoapBox\Formatter\Parsers\Parser;
+    6: use SoapBox\Formatter\Parsers\ArrayParser;
+    7  
+    8  class ArrayParserTest extends TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/Parsers/CsvParserTest.php:
+    1: <?php namespace SoapBox\Formatter\Test\Parsers;
+    2  
+    3: use SoapBox\Formatter\Test\TestCase;
+    4: use SoapBox\Formatter\Parsers\Parser;
+    5: use SoapBox\Formatter\Parsers\CsvParser;
+    6  
+    7  class CsvParserTest extends TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/Parsers/JsonParserTest.php:
+    1: <?php namespace SoapBox\Formatter\Test\Parsers;
+    2  
+    3: use SoapBox\Formatter\Test\TestCase;
+    4: use SoapBox\Formatter\Parsers\Parser;
+    5: use SoapBox\Formatter\Parsers\JsonParser;
+    6  
+    7  class JsonParserTest extends TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/Parsers/XmlParserTest.php:
+    1: <?php namespace SoapBox\Formatter\Test\Parsers;
+    2  
+    3: use SoapBox\Formatter\Test\TestCase;
+    4: use SoapBox\Formatter\Parsers\Parser;
+    5: use SoapBox\Formatter\Parsers\XmlParser;
+    6  
+    7  class XmlParserTest extends TestCase {
+
+/Users/yisroelperkel/Repos/laravel-formatter/tests/unit/Parsers/YamlParserTest.php:
+    1: <?php namespace SoapBox\Formatter\Test\Parsers;
+    2  
+    3: use SoapBox\Formatter\Test\TestCase;
+    4: use SoapBox\Formatter\Parsers\Parser;
+    5: use SoapBox\Formatter\Parsers\YamlParser;
+    6: use SoapBox\Formatter\Parsers\XmlParser;
+    7  
+    8  class YamlParserTest extends TestCase {
+
+54 matches across 20 files

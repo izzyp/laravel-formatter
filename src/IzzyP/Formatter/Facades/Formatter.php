@@ -1,4 +1,4 @@
-<?php namespace SoapBox\Formatter\Facades;
+<?php namespace IzzyP\Formatter\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

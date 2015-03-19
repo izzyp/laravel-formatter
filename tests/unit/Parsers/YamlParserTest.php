@@ -1,9 +1,9 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace IzzyP\Formatter\Test\Parsers;
 
-use SoapBox\Formatter\Test\TestCase;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Parsers\YamlParser;
-use SoapBox\Formatter\Parsers\XmlParser;
+use IzzyP\Formatter\Test\TestCase;
+use IzzyP\Formatter\Parsers\Parser;
+use IzzyP\Formatter\Parsers\YamlParser;
+use IzzyP\Formatter\Parsers\XmlParser;
 
 class YamlParserTest extends TestCase {
 

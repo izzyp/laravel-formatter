@@ -1,8 +1,8 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace IzzyP\Formatter\Test\Parsers;
 
-use SoapBox\Formatter\Test\TestCase;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Parsers\CsvParser;
+use IzzyP\Formatter\Test\TestCase;
+use IzzyP\Formatter\Parsers\Parser;
+use IzzyP\Formatter\Parsers\CsvParser;
 
 class CsvParserTest extends TestCase {
 
