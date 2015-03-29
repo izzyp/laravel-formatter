@@ -18,7 +18,7 @@ class FormatterServiceProvider extends ServiceProvider {
    * @return void
    */
   public function boot() {
-    $this->package('IzzyP/laravel-formatter');
+    $this->package('izzy-p/laravel-formatter');
   }
   /**
    * Register the service provider.
